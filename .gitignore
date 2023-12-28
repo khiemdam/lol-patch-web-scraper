@@ -1,0 +1,9 @@
+# Virtual environment
+venv/
+env/
+.venv/
+__pycache__/
+
+# Ignore pipenv virtual environment
+Pipfile
+Pipfile.lock
