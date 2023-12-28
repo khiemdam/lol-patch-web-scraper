@@ -76,11 +76,17 @@ python3 main.py
     - [ ] Put necessary libraries in main
     - [X] Test if we can extract information from league website
     - [X] Create function to get html from league website
-    - [ ] Create function to parse through html (for url of newest patch notes)
+    - [X] Create function to parse through html (for url of newest patch notes)
     - [ ] Repeat for specific patch notes page
     - [ ] Create function to send email
 - [ ] Extract HTML
+    - [X] Read about requests
+    - [X] Obtain information from home page
+    - [X] Implement error checking
+    - [ ] Repeat for patch notes page
 - [ ] Parse w/ Beautiful Soup
+    - [X] Parse through home page for patch notes url
+    - [ ] Parse through patch notes page for champion info
 - [ ] Send email
 - [ ] Finalize everything on GitHub
 

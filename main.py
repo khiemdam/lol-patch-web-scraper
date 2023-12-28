@@ -4,6 +4,7 @@ League of Legends Patch Notes Web Scraper
 
 import sys
 import requests
+from bs4 import BeautifulSoup
 
 URL = "https://www.leagueoflegends.com/en-us/news/tags/patch-notes/"
 
@@ -22,4 +23,17 @@ def get_home_html():
 
     sys.exit(1)
 
-get_home_html()
+def parse_home(soup):
+    """Search html from leagueoflegends.com for the most recent patch."""
+    print("running parse_home")
+    # link to patch notes page is within html tag w/ class:
+    # style__Wrapper-sc-1h41bzo-0 style__ResponsiveWrapper-sc-1h41bzo-13 eIUhoC cGAodJ isVisible
+    patch_class = "style__Wrapper-sc-1h41bzo-0 style__ResponsiveWrapper-sc-1h41bzo-13 eIUhoC cGAodJ isVisible"
+    patch_elements = soup.find_all("a", class_=patch_class)
+    # each patch element contains an href in the <a> tag
+    # we want the most recent patch (first that appears on the page)
+    return "https://www.leagueoflegends.com" + patch_elements[0].get('href')
+
+soup = BeautifulSoup(get_home_html().content, "html.parser")
+PATCH_URL = parse_home(soup)
+print(PATCH_URL)
