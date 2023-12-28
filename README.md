@@ -4,11 +4,7 @@
 
 # League of Legends Patch Notes Web Scraper
 
-### Web Scraper that
-
-[Link to my website](https://khiemdam.github.io/recipes-website/)
-
-![Website Image](./readme-images/website-homepage.png)
+### Web Scraper that emails you relevant League of Legends information.
 
 ## Table of Contents
 * [Motivation](#motivation)
@@ -21,14 +17,12 @@
 
 ## Motivation
 
-This is an introductory project written in HTML and CSS to help me learn how to create a website with a boilerplate, absolute and relative links, images, and a style sheet. The project is also for helping me get in the habit of using github. This is mainly a side hobby to learn more about web development and front end development!
+Although I am not very good at League of Legends, I find it fun to return to the game and rank up on my favorite champions. However, single updates can often change the dynamic of the game, what matchups are favorable, and which characters are now broken (despite Riot's collective 200 years of experience).
 
-I also learned a bit of markdown in order to make my first README.md (which is this current file).
-
-I would like to eventually make my own website portfolio and put other projects that I have done on there.
+I often find it tedious and annoying to constantly check the League of Legends website for their patch notes, even though that information can be so useful. This is why I decided to learn what webscraping is, and how to use it to send myself the important stuff (in a digestable way)!
 
 ## Technologies
-* HTML
+* Python (Beautiful Soup)
 * Any IDE (I used VSCode)
 
 ## Installation
@@ -43,43 +37,58 @@ With HTTPS:
 git clone https://github.com/khiemdam/recipes-website.git
 ```
 
+Make sure you have python installed:
+
+MacOS:
+```
+brew install python3
+```
+WSL or Linux:
+```
+sudo apt-get update
+sudo apt-get install python3 python3-pip python3-venv python3-wheel python3-setuptools
+```
+
+Create a virtual environment and activate it:
+```
+python3 -m venv env
+source env/bin/activate
+```
+
+Install all required libraries:
+```
+pip install -r requirements.txt
+```
+
 
 ## How To Use
-To look at my website, use the link: https://khiemdam.github.io/recipes-website/
-Or, you can open the HTML file if you cloned my project.
-
-Follow the recipes and make some desserts!
+Run the following command:
+```
+python3 main.py
+```
 
 ## To-Do List
 - [X] Initial Structure
     - [X] Create repository and local directory for project
     - [X] Start README
-    - [X] Create index.html and boilerplate
-- [X] Recipe Page
-    - [X] Create recipes directory
-    - [X] Add new html files that will hold recipes
-    - [X] Add relative link to recipes on index.html
-- [X] First Recipe Page Content
-    - [X] Add title and image to a recipe page
-    - [X] Add description
-    - [X] Add ingredients
-    - [X] Add instructions
-- [X] Add More Recipes
-- [X] Revisit after learning CSS
-    - [X] Navigation Bar
-    - [X] Footer
-    - [X] Home Page
-    - [X] Recipe Pages
-    - [X] About Page
-    - [X] Contact Page
+    - [X] Create main.py and requirements.txt
+    - [ ] Install required libraries and document them
+- [ ] Web Scraper Skeleton
+    - [ ] Put necessary libraries in main
+    - [ ] Create function to get html from league website
+    - [ ] Create function to parse through html
+    - [ ] Create function to send email
+- [ ] Extract HTML
+- [ ] Parse w/ Beautiful Soup
+- [ ] Send email
 - [X] Finalize everything on GitHub
 
 ## Status
-Finished everything! Maybe revisit with JavaScript to make website cooler...
+Just started! Will be learning how to web scrape and implement my program...
 
 ## Credits
-* [I am learning HTML from "The Odin Project"](https://www.theodinproject.com/)
-* [WordPress Markdown Reference Sheet](https://wordpress.com/support/markdown-quick-reference/)
+* [Python Web Scraping Basics](https://realpython.com/python-web-scraping-practical-introduction/#get-to-know-regular-expressions)
+* [Python Beautiful Soup Basics](https://realpython.com/beautiful-soup-web-scraper-python/)
 * [Shields and Badges from shields.io](shields.io)
 * [Social Icons](https://fontawesome.com/)
 
