@@ -60,7 +60,6 @@ Install all required libraries:
 pip install -r requirements.txt
 ```
 
-
 ## How To Use
 Run the following command:
 ```
@@ -68,20 +67,22 @@ python3 main.py
 ```
 
 ## To-Do List
-- [X] Initial Structure
+- [ ] Initial Structure
     - [X] Create repository and local directory for project
     - [X] Start README
     - [X] Create main.py and requirements.txt
     - [ ] Install required libraries and document them
 - [ ] Web Scraper Skeleton
     - [ ] Put necessary libraries in main
-    - [ ] Create function to get html from league website
-    - [ ] Create function to parse through html
+    - [X] Test if we can extract information from league website
+    - [X] Create function to get html from league website
+    - [ ] Create function to parse through html (for url of newest patch notes)
+    - [ ] Repeat for specific patch notes page
     - [ ] Create function to send email
 - [ ] Extract HTML
 - [ ] Parse w/ Beautiful Soup
 - [ ] Send email
-- [X] Finalize everything on GitHub
+- [ ] Finalize everything on GitHub
 
 ## Status
 Just started! Will be learning how to web scrape and implement my program...
