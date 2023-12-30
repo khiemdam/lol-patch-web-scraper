@@ -88,6 +88,10 @@ python3 main.py
     - [X] Parse through home page for patch notes url
     - [ ] Parse through patch notes page for champion info
 - [ ] Send email
+    - [ ] Read documentation
+    - [ ] Create method to pass in txt of emails to send
+    - [ ] Start an SMTP connection and context
+    - [ ] Add style to the email using MIMEText
 - [ ] Finalize everything on GitHub
 
 ## Status
@@ -96,6 +100,7 @@ Just started! Will be learning how to web scrape and implement my program...
 ## Credits
 * [Python Web Scraping Basics](https://realpython.com/python-web-scraping-practical-introduction/#get-to-know-regular-expressions)
 * [Python Beautiful Soup Basics](https://realpython.com/beautiful-soup-web-scraper-python/)
+* [Python Send Email Basics](https://realpython.com/python-send-email/)
 * [Shields and Badges from shields.io](shields.io)
 * [Social Icons](https://fontawesome.com/)
 
