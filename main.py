@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 from scraper import parse_patch
 
 HOME_URL = "https://www.leagueoflegends.com/en-us/news/tags/patch-notes/"
-sender_email = "youremail@gmail.com"
-password = "yourpasswordhere"
+SENDER_EMAIL = "youremail@gmail.com"
+SENDER_PASS = "yourpasswordhere"
 
 def get_html(url):
     """Get the html from leagueoflegends.com and store it."""
@@ -25,9 +25,10 @@ def get_html(url):
 
     sys.exit(1)
 
-def parse_home(soup):
+def parse_home(html):
     """Search html from leagueoflegends.com for the most recent patch."""
     print("running parse_home")
+    soup = BeautifulSoup(html, "html.parser")
     # link to patch notes page is within html tag w/ class:
     # style__Wrapper-sc-1h41bzo-0 style__ResponsiveWrapper-sc-1h41bzo-13 eIUhoC cGAodJ isVisible
     patch_class = "style__Wrapper-sc-1h41bzo-0 "
@@ -46,8 +47,8 @@ def send_email(info):
         for line in file:
             print(line.strip())
 
-home_soup = BeautifulSoup(get_html(HOME_URL).content, "html.parser")
-patch_url = parse_home(home_soup)
-patch_soup = BeautifulSoup(get_html(patch_url).content, "html.parser")
-patch_info = parse_patch(patch_url)
+home_html = get_html(HOME_URL).content
+patch_url = parse_home(home_html)
+patch_html = get_html(patch_url).content
+patch_info = parse_patch(patch_html)
 send_email(patch_info)
