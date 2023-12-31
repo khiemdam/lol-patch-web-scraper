@@ -24,7 +24,7 @@ def parse_patch(html):
             "changes": [
                 {
                     "type": "",
-                    "details": ""
+                    "details": []
                 }
             ]
         }
@@ -73,18 +73,36 @@ def find_changes(elt):
     """Find specifics of champion patch."""
     changes = []
     # Start by finding ability changes
-    ability_classes = elt.find_all("h4", class_="change-detail-title ability-title")
+    ability_classes = elt.find_all("h4", class_="change-detail-title")
     if ability_classes:
         for ability_class in ability_classes:
             ability_change = {
                 "type": "",
-                "details": ""
+                "details": []
             }
             ability_change["type"] = ability_class.text.strip()
             # details TYPICALLY come after the h4 as an unorderd list
             detail_list = ability_class.find_next("ul")
-            print(detail_list)
+            if detail_list:
+                li_elements = detail_list.find_all("li")
+                for li in li_elements:
+                    detail = li.get_text().strip()
+                    ability_change["details"].append(detail)
+            changes.append(ability_change)
 
-    # Then, check for others (base stats, new champ release, etc)
-    
+    # Sometimes, there will be new champions with unique information
+    div_class = elt.find("hr", class_="divider")
+    if div_class:
+        next_elt = div_class.find_next()
+        if next_elt.name == 'ul':
+            ability_change = {
+                "type": "New Champion",
+                "details": []
+            }
+            li_elements = next_elt.find_all("li")
+            for li in li_elements:
+                detail = li
+                ability_change["details"].append(detail)
+            changes.append(ability_change)
+
     return changes

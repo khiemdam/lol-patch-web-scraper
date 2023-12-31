@@ -2,83 +2,21 @@ running get_html on https://www.leagueoflegends.com/en-us/news/tags/patch-notes/
 running parse_home
 running get_html on https://www.leagueoflegends.com/en-us/news/game-updates/patch-13-24-notes/
 running parse_patch
-{'img': 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3ab99a15c653d16b/6567e203d28c5a75463e053a/Hwei_Square_(1).png?disposition=inline', 'name': 'Hwei', 'summary': None, 'changes': []}
-<ul>
-<li><strong>Damage</strong>: 2-77 (levels 10-18) (+50/65/80/95/110) (+55% AP) ⇒ 2-77 (levels 10-18) <strong>(+50/67/84/101/118)</strong> (+55% AP)</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Azir.png', 'name': 'Azir', 'summary': 'W damage increased.', 'changes': []}
-<ul>
-<li><strong>Minimum Knock Up Duration</strong>: 0.3 seconds ⇒ 0.6 seconds</li>
-<li><strong>Secondary Target Knock Up Duration</strong>: 0.3 seconds ⇒ 0.6 seconds</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Braum.png', 'name': 'Braum', 'summary': 'Base mana regeneration increased. R knock up duration increased.', 'changes': []}
-<ul>
-<li><strong>Damage</strong>: 60/95/130/165/200 (+80% bonus AD) ⇒ <strong>60/90/120/150/180</strong> (+80% bonus AD)</li>
-</ul>
-<ul>
-<li><strong>Bonus Attack Speed</strong>: 60/75/90/105/120% ⇒ 55/70/85/100/115%</li>
-</ul>
-<ul>
-<li><strong>Damage Reduction</strong>: 40% ⇒ 35%</li>
-<li><strong>Healing</strong>: 10/11.5/13/14.5/16% of Maximum Health ⇒ 9/10/11/12/13% of Maximum Health</li>
-</ul>
-<ul>
-<li><strong>Damage</strong>: 150/300/450 (+75% bonus AD) (+110% AP) Physical Damage ⇒ 150/300/450 <strong>(+50% bonus AD) (+120% AP) Magic Damage</strong></li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Briar.png', 'name': 'Briar', 'summary': 'Base armor decreased, attack speed ratio increased. Q damage increased. W bonus attack speed decreased. E damage resistance decreased, healing decreased. R damage decreased, damage type changed to magic.', 'changes': []}
-<ul>
-<li><strong>Cooldown</strong>: 12/11.5/11/10.5/10 seconds ⇒ 12/11/10/9/8 seconds</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Galio.png', 'name': 'Galio', 'summary': 'Q cooldown decreased.', 'changes': []}
-<ul>
-<li><strong>Cooldown</strong>: 12 seconds ⇒ 12/10/8/6 seconds (levels 1/6/11/16)</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Gragas.png', 'name': 'Gragas', 'summary': 'Passive cooldown now decreases with level.', 'changes': []}
-<ul>
-<li><strong>Slow</strong>: 50/55/60/65/70% ⇒ 45/50/55/60/65%</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Ivern.png', 'name': 'Ivern', 'summary': 'Base health decreased. E slow decreased.', 'changes': []}
-<ul>
-<li><strong>Mana Cost</strong>: 60/65/70/75/80 ⇒ 40/45/50/55/60</li>
-<li><strong>Damage</strong>: 20/40/60/80/100 (+50% AD) (+30% bonus armor) (+30% bonus magic resistance) (+6/7/8/9/10% target's maximum health) ⇒ 20/40/60/80/100 (+50% AD) <strong>(+50% bonus armor) (+50% bonus magic resistance)</strong> (+6/7/8/9/10% target's maximum health)</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/KSante.png', 'name': "K'Sante", 'summary': 'W mana cost decreased, damage increased.', 'changes': []}
-<ul>
-<li><strong>Bonus Armor</strong>: 20/25/30/35/40 (+20% bonus armor) ⇒ <strong>20/27.5/35/42.5/50</strong> (+20% bonus armor)</li>
-<li><strong>Bonus Magic Resistance</strong>: 20/25/30/35/40 (+20% bonus magic resistance) ⇒ <strong>20/27.5/35/42.5/50</strong> (+20% bonus magic resistance)</li>
-</ul>
-<ul>
-<li><strong>Damage</strong>: 100/175/250 (+80% AP) ⇒ <strong>150/225/300</strong> (+80% AP)</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Leona.png', 'name': 'Leona', 'summary': 'W bonus armor and MR increased. R damage increased.', 'changes': []}
-<ul>
-<li><strong>Cooldown</strong>: 22/20/18/16/14 seconds ⇒ 19/17.75/16.5/15.25/14 seconds</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Lucian.png', 'name': 'Lucian', 'summary': 'E cooldown decreased.', 'changes': []}
-<ul>
-<li><strong>Damage</strong>: 75/95/115/135/155 (+5-139 (based on level)) (+60% AP) ⇒ 75/95/115/135/155 (+5-139 (based on level)) <strong>(+70% AP)</strong></li>
-</ul>
-<ul>
-<li><strong>You Can Run…</strong>: Casting Realm of Death will now reveal the target upon starting the cast. This means that walking into a brush while Mordekaiser is casting his R will no longer cancel the spell. Note: The target will not be revealed for the entire duration of the spell, so you can still hide on bush if one comes with you to the Realm.</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Mordekaiser.png', 'name': 'Mordekaiser', 'summary': 'Q damage increased. R now reveals the target upon initial cast.', 'changes': []}
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Qiyana.png', 'name': 'Qiyana', 'summary': 'Base mana and mana growth increased.', 'changes': []}
-<ul>
-<li><strong>Quality of Life Change</strong>: When cast at range, Q will now reset Talon's attack timer. <em>(Note: this has been updated to match the functionality of his Q when cast at melee range.)</em></li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Talon.png', 'name': 'Talon', 'summary': "Ranged Q now also resets Talon's attack timer.", 'changes': []}
-<ul>
-<li>Fixed a bug where the first half of the rift would fizzle if Vel'Koz died directly after casting.</li>
-</ul>
-<ul>
-<li>Fixed a bug where the spell would fizzle out when V'K flashes or is knocked back at max range.</li>
-<li>Tectonic Disruption's missile will now spawn at Vel'koz's original location if he flashes or is knocked back during the cast.</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Velkoz.png', 'name': "Vel'Koz", 'summary': 'W and E Bugfixes', 'changes': []}
-<ul>
-<li><strong>Damage</strong>: 20/60/100/140/180 (+130% AD) (+25% AP) ⇒ <strong>30/70/110/150/190</strong> (+130% AD) (+25% AP)</li>
-</ul>
-{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Zeri.png', 'name': 'Zeri', 'summary': 'AD growth increased. W damage increased.', 'changes': []}
+{'img': 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3ab99a15c653d16b/6567e203d28c5a75463e053a/Hwei_Square_(1).png?disposition=inline', 'name': 'Hwei', 'summary': None, 'changes': [{'type': 'New Champion', 'details': [<li><em>Hwei Abilities Rundown <a href="https://www.leagueoflegends.com/en-au/event/hwei-abilities-rundown/">here</a>!</em></li>, <li><em>Hwei Champion Bio <a href="https://universe.leagueoflegends.com/en_US/champion/hwei">here</a>!</em></li>, <li><em>Hwei Champion Trailer <a href="https://www.youtube.com/watch?v=G8tL3g-gDjo">here</a>!</em></li>, <li><em>Hwei Champion Insights <a href="https://www.leagueoflegends.com/en-us/news/dev/champion-insights-hwei/">here</a>!</em></li>]}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Azir.png', 'name': 'Azir', 'summary': 'W damage increased.', 'changes': [{'type': 'W - Arise!', 'details': ['Damage: 2-77 (levels 10-18) (+50/65/80/95/110) (+55% AP) ⇒ 2-77 (levels 10-18) (+50/67/84/101/118) (+55% AP)']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Braum.png', 'name': 'Braum', 'summary': 'Base mana regeneration increased. R knock up duration increased.', 'changes': [{'type': 'Base Stats', 'details': ['Base Mana Regeneration: 6 ⇒ 7']}, {'type': 'R - Glacial Fissure', 'details': ['Minimum Knock Up Duration: 0.3 seconds ⇒ 0.6 seconds', 'Secondary Target Knock Up Duration: 0.3 seconds ⇒ 0.6 seconds']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Briar.png', 'name': 'Briar', 'summary': 'Base armor decreased, attack speed ratio increased. Q damage increased. W bonus attack speed decreased. E damage resistance decreased, healing decreased. R damage decreased, damage type changed to magic.', 'changes': [{'type': 'Base Stats', 'details': ['Base Armor: 32 ⇒ 30', 'Attack Speed Ratio: 0.644 ⇒ 0.669 (Note: Attack speed at level 1 is unchanged.)']}, {'type': 'Q - Head Rush', 'details': ['Damage: 60/95/130/165/200 (+80% bonus AD) ⇒ 60/90/120/150/180 (+80% bonus AD)']}, {'type': 'W - Blood Frenzy', 'details': ['Bonus Attack Speed: 60/75/90/105/120% ⇒ 55/70/85/100/115%']}, {'type': 'E - Chilling Scream', 'details': ['Damage Reduction: 40% ⇒ 35%', 'Healing: 10/11.5/13/14.5/16% of Maximum Health ⇒ 9/10/11/12/13% of Maximum Health']}, {'type': 'R - Certain Death', 'details': ['Damage: 150/300/450 (+75% bonus AD) (+110% AP) Physical Damage ⇒ 150/300/450 (+50% bonus AD) (+120% AP) Magic Damage']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Galio.png', 'name': 'Galio', 'summary': 'Q cooldown decreased.', 'changes': [{'type': 'Q - Winds of War', 'details': ['Cooldown: 12/11.5/11/10.5/10 seconds ⇒ 12/11/10/9/8 seconds']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Gragas.png', 'name': 'Gragas', 'summary': 'Passive cooldown now decreases with level.', 'changes': [{'type': 'Passive - Happy Hour', 'details': ['Cooldown: 12 seconds ⇒ 12/10/8/6 seconds (levels 1/6/11/16)']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Ivern.png', 'name': 'Ivern', 'summary': 'Base health decreased. E slow decreased.', 'changes': [{'type': 'Base Stats', 'details': ['Base Health: 655 ⇒ 630']}, {'type': 'E - Triggerseed', 'details': ['Slow: 50/55/60/65/70% ⇒ 45/50/55/60/65%']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/KSante.png', 'name': "K'Sante", 'summary': 'W mana cost decreased, damage increased.', 'changes': [{'type': 'W - Path Maker', 'details': ['Mana Cost: 60/65/70/75/80 ⇒ 40/45/50/55/60', "Damage: 20/40/60/80/100 (+50% AD) (+30% bonus armor) (+30% bonus magic resistance) (+6/7/8/9/10% target's maximum health) ⇒ 20/40/60/80/100 (+50% AD) (+50% bonus armor) (+50% bonus magic resistance) (+6/7/8/9/10% target's maximum health)"]}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Leona.png', 'name': 'Leona', 'summary': 'W bonus armor and MR increased. R damage increased.', 'changes': [{'type': 'W - Eclipse', 'details': ['Bonus Armor: 20/25/30/35/40 (+20% bonus armor) ⇒ 20/27.5/35/42.5/50 (+20% bonus armor)', 'Bonus Magic Resistance: 20/25/30/35/40 (+20% bonus magic resistance) ⇒ 20/27.5/35/42.5/50 (+20% bonus magic resistance)']}, {'type': 'R - Solar Flare', 'details': ['Damage: 100/175/250 (+80% AP) ⇒ 150/225/300 (+80% AP)']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Lucian.png', 'name': 'Lucian', 'summary': 'E cooldown decreased.', 'changes': [{'type': 'E - Relentless Pursuit', 'details': ['Cooldown: 22/20/18/16/14 seconds ⇒ 19/17.75/16.5/15.25/14 seconds']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Mordekaiser.png', 'name': 'Mordekaiser', 'summary': 'Q damage increased. R now reveals the target upon initial cast.', 'changes': [{'type': 'Q - Obliterate', 'details': ['Damage: 75/95/115/135/155 (+5-139 (based on level)) (+60% AP) ⇒ 75/95/115/135/155 (+5-139 (based on level)) (+70% AP)']}, {'type': 'R - Realm of Death', 'details': ['You Can Run…: Casting Realm of Death will now reveal the target upon starting the cast. This means that walking into a brush while Mordekaiser is casting his R will no longer cancel the spell. Note: The target will not be revealed for the entire duration of the spell, so you can still hide on bush if one comes with you to the Realm.']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Qiyana.png', 'name': 'Qiyana', 'summary': 'Base mana and mana growth increased.', 'changes': [{'type': 'Base Stats', 'details': ['Base Mana: 325 ⇒ 375', 'Mana Growth: 50 ⇒ 60']}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Talon.png', 'name': 'Talon', 'summary': "Ranged Q now also resets Talon's attack timer.", 'changes': [{'type': 'Q - Noxian Diplomacy', 'details': ["Quality of Life Change: When cast at range, Q will now reset Talon's attack timer. (Note: this has been updated to match the functionality of his Q when cast at melee range.)"]}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Velkoz.png', 'name': "Vel'Koz", 'summary': 'W and E Bugfixes', 'changes': [{'type': 'W - Void Rift', 'details': ["Fixed a bug where the first half of the rift would fizzle if Vel'Koz died directly after casting."]}, {'type': 'E - Tectonic Disruption', 'details': ["Fixed a bug where the spell would fizzle out when V'K flashes or is knocked back at max range.", "Tectonic Disruption's missile will now spawn at Vel'koz's original location if he flashes or is knocked back during the cast."]}]}
+{'img': 'https://am-a.akamaihd.net/image?f=http://ddragon.leagueoflegends.com/cdn/13.23.1/img/champion/Zeri.png', 'name': 'Zeri', 'summary': 'AD growth increased. W damage increased.', 'changes': [{'type': 'Base Stats', 'details': ['AD Growth: 1.3 ⇒ 2']}, {'type': 'W - Ultrashock Laser', 'details': ['Damage: 20/60/100/140/180 (+130% AD) (+25% AP) ⇒ 30/70/110/150/190 (+130% AD) (+25% AP)']}]}
 {'img': None, 'name': None, 'summary': None, 'changes': []}
 running send_email
 johndoe@gmail.com
