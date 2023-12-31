@@ -77,25 +77,25 @@ python3 main.py
     - [X] Test if we can extract information from league website
     - [X] Create function to get html from league website
     - [X] Create function to parse through html (for url of newest patch notes)
-    - [ ] Repeat for specific patch notes page
+    - [X] Repeat for specific patch notes page
     - [ ] Create function to send email
-- [ ] Extract HTML
+- [X] Extract HTML
     - [X] Read about requests
     - [X] Obtain information from home page
     - [X] Implement error checking
-    - [ ] Repeat for patch notes page
-- [ ] Parse w/ Beautiful Soup
+    - [X] Repeat for patch notes page
+- [X] Parse w/ Beautiful Soup
     - [X] Parse through home page for patch notes url
-    - [ ] Parse through patch notes page for champion info
+    - [X] Parse through patch notes page for champion info
 - [ ] Send email
-    - [ ] Read documentation
+    - [X] Read documentation
     - [ ] Create method to pass in txt of emails to send
     - [ ] Start an SMTP connection and context
     - [ ] Add style to the email using MIMEText
 - [ ] Finalize everything on GitHub
 
 ## Status
-Just started! Will be learning how to web scrape and implement my program...
+Working on email portion of the program...
 
 ## Credits
 * [Python Web Scraping Basics](https://realpython.com/python-web-scraping-practical-introduction/#get-to-know-regular-expressions)
