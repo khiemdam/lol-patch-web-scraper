@@ -45,6 +45,7 @@ def send_email(info):
     file_path = "emails.txt"
     with open(file_path, 'r', encoding="utf-8") as file:
         for line in file:
+            # print(info)
             print(line.strip())
 
 home_html = get_html(HOME_URL).content

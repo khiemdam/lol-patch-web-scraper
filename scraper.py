@@ -31,10 +31,11 @@ def parse_patch(html):
         champ_info["img"] = find_img(champ_element)
         champ_info["name"] = find_name(champ_element)
         champ_info["summary"] = find_summary(champ_element)
+        champ_info["changes"] = find_changes(champ_element)
         print(champ_info)
         patch_info.append(champ_info)
 
-    return soup
+    return patch_info
 
 def find_img(elt):
     """Find img src for patched champion."""
@@ -67,3 +68,23 @@ def find_summary(elt):
     else:
         summary = None
     return summary
+
+def find_changes(elt):
+    """Find specifics of champion patch."""
+    changes = []
+    # Start by finding ability changes
+    ability_classes = elt.find_all("h4", class_="change-detail-title ability-title")
+    if ability_classes:
+        for ability_class in ability_classes:
+            ability_change = {
+                "type": "",
+                "details": ""
+            }
+            ability_change["type"] = ability_class.text.strip()
+            # details TYPICALLY come after the h4 as an unorderd list
+            detail_list = ability_class.find_next("ul")
+            print(detail_list)
+
+    # Then, check for others (base stats, new champ release, etc)
+    
+    return changes
