@@ -8,8 +8,9 @@ def parse_patch(html):
     """Search patch notes for relevant info."""
     print("running parse_patch")
     soup = BeautifulSoup(html, "html.parser")
-    # print(soup.get_text())
 
+    patch_name = soup.find("h1", class_="style__Title-sc-vd48si-5 kDFvhf")
+    patch_name = patch_name.text.split()[1]
     patch_info = []
 
     # Champions
@@ -32,10 +33,9 @@ def parse_patch(html):
         champ_info["name"] = find_name(champ_element)
         champ_info["summary"] = find_summary(champ_element)
         champ_info["changes"] = find_changes(champ_element)
-        print(champ_info)
         patch_info.append(champ_info)
 
-    return patch_info
+    return patch_name, patch_info
 
 def find_img(elt):
     """Find img src for patched champion."""
@@ -97,12 +97,16 @@ def find_changes(elt):
         if next_elt.name == 'ul':
             ability_change = {
                 "type": "New Champion",
-                "details": []
+                "details": [],
+                "new": []
             }
             li_elements = next_elt.find_all("li")
             for li in li_elements:
                 detail = li
+                new_detail = detail.find("a")
+                new_detail = new_detail.get("href")
                 ability_change["details"].append(detail)
+                ability_change["new"].append(new_detail)
             changes.append(ability_change)
 
     return changes
