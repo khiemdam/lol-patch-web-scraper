@@ -46,30 +46,74 @@ def send_email(patch, info, sender_email, sender_password):
     """Send patch note info as an email"""
     print("running send_email")
 
+    css = """
+    <head>
+        <style>
+            * {
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
+                background-color: #f4f4f4;
+                color: #333333;
+            }
+            .summary {
+                font-style: italic;
+            }
+            .container {
+                display: flex;
+            }
+            .left_block {
+                display: inline-block;
+                margin: auto;
+            }
+            .right_block {
+                display: inline-block;
+                margin: auto;
+                width: 75%;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    """
+
     # first, we will construct the format of our email
-    text = "----------------------------------------\n"
+    text = "--------------------------------------------------\n"
     text += f"League of Legends Patch {patch} Summary\n"
-    # html = f"<html><body><h1>League of Legends Patch {patch} Summary<br></h1>"
+    html = f"""<html>{css}<body><h1>League of Legends Patch {patch} Summary</h1>"""
 
     for champ in info:
         if champ['name'] is not None:
-            text += "----------------------------------------\n"
-            text += f"{champ['name']}\n\n"
+            text += "--------------------------------------------------\n"
+            html += "<hr>"
+            text += f"""<div class="container">{champ['name']}\n\n"""
+            html += f"""
+            <div class="left_block">
+                <img src="{champ['img']}"alt="Image of {champ['name']}" class="champ_pic">
+            </div>
+            <div class="right_block">
+            """
+            html += f"<h2>{champ['name']}</h2>"
 
             # champions that just got released will not have a summary
             if champ['summary'] is not None:
                 text += f"     \"{champ['summary']}\"\n\n"
+                html += f"""<div class=summary>"{champ['summary']}"</div>"""
+
 
             for change in champ['changes']:
                 text += f"{change['type']}:\n"
+                html += f"<div class=change_type>{change['type']}</div>"
+                html += "<div class=changes><ul>"
                 for i, detail in enumerate(change['details']):
                     if change['type'] != "New Champion":
                         text += f"  * {detail}\n"
+                        html += f"<li>{detail}</li>"
                     else:
                         text += f"  * {change['new'][i]}\n"
-
-    html = text.replace('\n', '<br>')
-    html = f"<html><body><p>{html}</p></body></html>"
+                        html += f"{detail}"
+                html += "</ul></div>"
+            html += "</div></div>"
+    html += "</html></body>"
 
     file_path = "emails.txt"
     part1 = MIMEText(text, "plain")
