@@ -15,6 +15,7 @@
 * [How To Use](#how-to-use)
 * [To-Do List](#to-do-list)
 * [Status](#status)
+* [Notes](#notes)
 * [Credits](#credits)
 
 ## Motivation
@@ -106,6 +107,13 @@ If you are interested, fork my repo and automate this program! I would recommend
 
 ## Status
 Finished the project! If you have any ideas for improvements, please reach out to me!
+
+## Notes
+I divided the work into three different files: main.py, scraper.py, handle_email.py. I tried to focus on splitting up tasks into functions, so that I could debug and read my code much more easier.
+
+With Beautiful Soup, I mainly utilized the .find() and .find_next() member functions to search for unique classes corresponding to the information on the patch notes. I also kept a list of dictionaries datastructure (similar to .json format), so I can see how one could implement a web scraper in a web app.
+
+For emailing, I followed a tutorial that shows how to use SMTP, specifically Google's SMTP server. I used Google's app password feature, but it is possible to utilize other SMTP services. I was also able to essentially create an HTML and CSS file to format my emails with MIMEText, making it much more easy to read and look at.
 
 ## Credits
 * [Python Web Scraping Basics](https://realpython.com/python-web-scraping-practical-introduction/#get-to-know-regular-expressions)
