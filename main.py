@@ -50,27 +50,45 @@ def send_email(patch, info, sender_email, sender_password):
     <head>
         <style>
             * {
-                font-family: "Comic Sans MS", "Comic Sans", cursive;
+                font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
                 background-color: #f4f4f4;
                 color: #333333;
+            }
+            h1 {
+                padding-left: 20px;
+                padding-top: 20px;
             }
             .summary {
                 font-style: italic;
             }
             .container {
+                width: 100%;
+                overflow: hidden;
                 display: flex;
             }
             .left_block {
                 display: inline-block;
-                margin: auto;
+                width: 15%;
+                height: 100%;
+                text-align: center;
+                margin: auto
+            }
+            .left_block img {
+                vertical-align: middle;
             }
             .right_block {
+                width: 85%;
                 display: inline-block;
-                margin: auto;
-                width: 75%;
-                align-items: center;
-                justify-content: center;
-                padding: 20px;
+                margin-left: 5px;
+                margin-right: 20px;
+            }
+            h2 {
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+            .summary {
+                font-weight: bolder;
+                margin-bottom: 15px;
             }
         </style>
     </head>
@@ -84,8 +102,8 @@ def send_email(patch, info, sender_email, sender_password):
     for champ in info:
         if champ['name'] is not None:
             text += "--------------------------------------------------\n"
-            html += "<hr>"
-            text += f"""<div class="container">{champ['name']}\n\n"""
+            html += """<hr><div class="container">"""
+            text += f"{champ['name']}\n\n"
             html += f"""
             <div class="left_block">
                 <img src="{champ['img']}"alt="Image of {champ['name']}" class="champ_pic">
@@ -114,6 +132,8 @@ def send_email(patch, info, sender_email, sender_password):
                 html += "</ul></div>"
             html += "</div></div>"
     html += "</html></body>"
+
+    # print(html)
 
     file_path = "emails.txt"
     part1 = MIMEText(text, "plain")

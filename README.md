@@ -4,7 +4,9 @@
 
 # League of Legends Patch Notes Web Scraper
 
-### Web Scraper that emails you relevant League of Legends information.
+### Web Scraper that emails you relevant League of Legends information from the most recent patch notes. Utilizes Beautiful Soup to parse through the LoL patch notes, and sends an email with smtplib to whoever the user specified (stylized with MIMEText).
+
+![Website Image](/images/lol-web-scraper.png)
 
 ## Table of Contents
 * [Motivation](#motivation)
@@ -19,10 +21,10 @@
 
 Although I am not very good at League of Legends, I find it fun to return to the game and rank up on my favorite champions. However, single updates can often change the dynamic of the game, what matchups are favorable, and which characters are now broken (despite Riot's collective 200 years of experience).
 
-I often find it tedious and annoying to constantly check the League of Legends website for their patch notes, even though that information can be so useful. This is why I decided to learn what webscraping is, and how to use it to send myself the important stuff (in a digestable way)!
+I often find it tedious and annoying to constantly analyze the League of Legends website for their long patch notes, even though that information can be so useful. This is why I decided to learn about web scraping, and how to use it to send myself the important stuff (in a digestable way)!
 
 ## Technologies
-* Python (Beautiful Soup)
+* Python (Beautiful Soup, MIMEText, smtplib)
 * Any IDE (I used VSCode)
 
 ## Installation
@@ -61,24 +63,32 @@ pip install -r requirements.txt
 ```
 
 ## How To Use
+First, you need an email address to send emails from. You may need to use a [Google App Password](https://support.google.com/accounts/answer/185833?hl=en) for the next steps.
+
+Next, make sure you modify emails.txt. In this file, you should put all of the people that you want to send an email to.
+
 Run the following command:
 ```
-python3 main.py
+python3 main.py --email youremail@gmail.com --password "google app password here"
 ```
 
+And you're done! The program will send a summary of the patch notes to whoever you wanted to send it to. The email may end up in a spam folder.
+
+If you are interested, fork my repo and automate this program! I would recommend having this web scraper run once every two weeks/one month, as that is typically when a patch comes out.
+
 ## To-Do List
-- [ ] Initial Structure
+- [X] Initial Structure
     - [X] Create repository and local directory for project
     - [X] Start README
     - [X] Create main.py and requirements.txt
-    - [ ] Install required libraries and document them
-- [ ] Web Scraper Skeleton
-    - [ ] Put necessary libraries in main
+    - [X] Install required libraries and document them
+- [X] Web Scraper Skeleton
+    - [X] Put necessary libraries in main
     - [X] Test if we can extract information from league website
     - [X] Create function to get html from league website
     - [X] Create function to parse through html (for url of newest patch notes)
     - [X] Repeat for specific patch notes page
-    - [ ] Create function to send email
+    - [X] Create function to send email
 - [X] Extract HTML
     - [X] Read about requests
     - [X] Obtain information from home page
@@ -87,15 +97,15 @@ python3 main.py
 - [X] Parse w/ Beautiful Soup
     - [X] Parse through home page for patch notes url
     - [X] Parse through patch notes page for champion info
-- [ ] Send email
+- [X] Send email
     - [X] Read documentation
-    - [ ] Create method to pass in txt of emails to send
-    - [ ] Start an SMTP connection and context
-    - [ ] Add style to the email using MIMEText
-- [ ] Finalize everything on GitHub
+    - [X] Create method to pass in txt of emails to send
+    - [X] Start an SMTP connection and context
+    - [X] Add style to the email using MIMEText
+- [X] Finalize everything on GitHub
 
 ## Status
-Working on email portion of the program...
+Finished the project! If you have any ideas for improvements, please reach out to me!
 
 ## Credits
 * [Python Web Scraping Basics](https://realpython.com/python-web-scraping-practical-introduction/#get-to-know-regular-expressions)
@@ -110,5 +120,5 @@ Working on email portion of the program...
 [linkedin-url]: https://www.linkedin.com/in/khiemd/
 [handshake-shield]: https://img.shields.io/badge/Handshake-555?style=for-the-badge&logo=handshake&logoColor=white
 [handshake-url]: https://app.joinhandshake.com/stu/users/31441591
-[status-shield]: https://img.shields.io/badge/status-WIP-555?style=for-the-badge&color=FFA500
+[status-shield]: https://img.shields.io/badge/status-completed-555?style=for-the-badge&labelColor=555&color=03c04a
 <!-- https://img.shields.io/badge/status-completed-555?style=for-the-badge&labelColor=555&color=03c04a -->
