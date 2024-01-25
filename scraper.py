@@ -91,7 +91,7 @@ def find_changes(elt):
             changes.append(ability_change)
 
     # Sometimes, there will be new champions with unique information
-    div_class = elt.find("hr", class_="divider")
+    div_class = elt.find("blockquote", class_="blockquote context")
     if div_class:
         next_elt = div_class.find_next()
         if next_elt.name == 'ul':
@@ -103,8 +103,11 @@ def find_changes(elt):
             li_elements = next_elt.find_all("li")
             for li in li_elements:
                 detail = li
+                print(detail)
                 new_detail = detail.find("a")
-                new_detail = new_detail.get("href")
+                print(new_detail)
+                if new_detail:
+                    new_detail = new_detail.get("href")
                 ability_change["details"].append(detail)
                 ability_change["new"].append(new_detail)
             changes.append(ability_change)
